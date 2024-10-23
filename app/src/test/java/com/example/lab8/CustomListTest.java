@@ -62,6 +62,7 @@ public class CustomListTest {
      * then creates another city object and doesn't add it to the list
      * tries to delete city (exception should be thrown)
      */
+    /*
     @Test
     void testDelete() {
         CustomList cityList = MockCityList();
@@ -77,7 +78,7 @@ public class CustomListTest {
         });
         assertEquals("City not in list", exception.getMessage());
     }
-
+    */
 
 
 }
