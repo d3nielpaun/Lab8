@@ -78,6 +78,12 @@ public class CustomListTest {
         assertEquals("City not in list", exception.getMessage());
     }
 
+    /**
+     * create three city objects and add them to list
+     * check count of list (should be 3)
+     * delete one city and check count is decremented
+     * repeat until list is empty
+     */
     @Test
     void countCitiesTest() {
         list = MockCityList();
@@ -86,9 +92,9 @@ public class CustomListTest {
         City city1 = new City("Vancouver", "British Columbia");
         City city2 = new City("Calgary", "Alberta");
         City city3 = new City("Toronto", "Ontario");
-        list.add(city1);
-        list.add(city2);
-        list.add(city3);
+        list.addCity(city1);
+        list.addCity(city2);
+        list.addCity(city3);
         assertEquals(3, list.countCities());
         list.delete(city1);
         assertEquals(2, list.countCities());
