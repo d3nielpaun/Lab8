@@ -53,4 +53,32 @@ public class CustomListTest {
         assertTrue(cityList.hasCity(city));
     }
 
+
+    /**
+     * creates city object and adds it to list
+     * checks that the city is in the list (should be true)
+     * deletes the city
+     * checks if the city is in the list again (should be false)
+     * then creates another city object and doesn't add it to the list
+     * tries to delete city (exception should be thrown)
+     */
+    /*
+    @Test
+    void testDelete() {
+        CustomList cityList = MockCityList();
+        City city1 = new City("Calgary", "Alberta");
+        cityList.add(city1);
+        assertTrue(cityList.hasCity(city1));
+        cityList.delete(city1);
+        assertFalse(cityList.hasCity(city1));
+
+        City city2 = new City("Toronto", "Ontario");
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            cityList.delete(city2);
+        });
+        assertEquals("City not in list", exception.getMessage());
+    }
+    */
+
+
 }

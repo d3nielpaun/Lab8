@@ -1,5 +1,7 @@
 package com.example.lab8;
 
+import java.util.Objects;
+
 public class City {
 
     private String city;
@@ -36,5 +38,10 @@ public class City {
         City otherCity = (City) o;
         return city.equals(otherCity.city) &&
                 province.equals(otherCity.province);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(city, province);
     }
 }
