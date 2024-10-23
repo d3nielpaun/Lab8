@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-//import org.junit.Before;
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -46,11 +46,11 @@ public class CustomListTest {
      */
     @Test
     void hasCityTest() {
-        CustomList cityList = MockCityList();
+        list = MockCityList();
         City city = new City("Edmonton", "Alberta");
-        assertFalse(cityList.hasCity(city));
-        cityList.add(city);
-        assertTrue(cityList.hasCity(city));
+        assertFalse(list.hasCity(city));
+        list.addCity(city);
+        assertTrue(list.hasCity(city));
     }
 
 
@@ -62,7 +62,6 @@ public class CustomListTest {
      * then creates another city object and doesn't add it to the list
      * tries to delete city (exception should be thrown)
      */
-    /*
     @Test
     void testDelete() {
         CustomList cityList = MockCityList();
@@ -78,7 +77,7 @@ public class CustomListTest {
         });
         assertEquals("City not in list", exception.getMessage());
     }
-    */
+
 
 
 }
