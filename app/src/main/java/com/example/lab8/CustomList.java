@@ -77,7 +77,8 @@ public class CustomList extends ArrayAdapter<City> {
      * @param city This is a city to delete from the list
      */
     public void delete(City city) {
-
+        if (this.hasCity(city)) cities.remove(city);
+        else throw new RuntimeException("City not in list");
     }
 
 }
