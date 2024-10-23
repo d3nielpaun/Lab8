@@ -17,4 +17,24 @@ public class City {
     String getProvinceName(){
         return this.province;
     }
+
+    /**
+     * This checks if this City is equal to another object (same city and province)
+     *
+     * @param o The object to compare
+     *
+     * @return Boolean if this City is equal to the parameter
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        City otherCity = (City) o;
+        return city.equals(otherCity.city) &&
+                province.equals(otherCity.province);
+    }
 }
